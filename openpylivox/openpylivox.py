@@ -1722,7 +1722,7 @@ class openpylivox(object):
             return assignedDataPort, assignedCmdPort, assignedIMUPort
 
         except socket.error as err:
-            print(" *** ERROR: cannot bind to specified IP:Port(s), " + err)
+            print(" *** ERROR: cannot bind to specified IP:Port(s), " + str(err))
             sys.exit(3)
 
     def _waitForIdle(self):
